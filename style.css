@@ -753,5 +753,11 @@ hr {
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 80px;
+}
+
+.care-icon img {
+    width: 70px;
     height: 70px;
+    object-fit: contain;
 }
