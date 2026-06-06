@@ -57,18 +57,31 @@ body {
     font-weight: 400;
 }
 
-.title .arrow {
-    font-size: 30px;
+.arrow-wrap {
     margin-top: 20px;
-    opacity: 0.7;
-    display: inline-block;
-    animation: bounce 1.5s infinite;
+    line-height: 0.7;
 }
 
-@keyframes bounce {
-    0%   { transform: translateY(0); }
-    50%  { transform: translateY(10px); }
-    100% { transform: translateY(0); }
+.arrow {
+    font-size: 28px;
+    display: block;
+    opacity: 0;
+    animation: cascadeFade 2s infinite;
+}
+
+.arrow1 {
+    animation-delay: 0s;
+}
+
+.arrow2 {
+    animation-delay: 0.4s;
+}
+
+@keyframes cascadeFade {
+    0%   { opacity: 0; }
+    30%  { opacity: 0.8; }
+    60%  { opacity: 0; }
+    100% { opacity: 0; }
 }
 
 .hero2 {
