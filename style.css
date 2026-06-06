@@ -448,117 +448,267 @@ hr {
     letter-spacing: 1px;
 }
 
+/* =============================================
+   SECTION 8 — SUSTAINABLE PERFORMANCE
+   Full-width section with fabric composition table
+   ============================================= */
 .hero8 {
-    background: #2d2040;
+    background: #413749;
+    padding: 100px 80px;
+    color: white;
+}
+
+.sus-inner {
+    display: flex;
+    gap: 80px;
+    align-items: flex-start;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.sus-left {
+    flex: 1;
+}
+
+.sus-heading {
+    font-size: 13px;
+    letter-spacing: 4px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    opacity: 0.8;
+}
+
+.sus-sub {
+    font-size: 42px;
+    font-weight: 300;
+    line-height: 1.2;
+    margin-bottom: 28px;
+}
+
+.sus-sub em {
+    font-style: italic;
+}
+
+.sus-copy {
+    font-size: 16px;
+    line-height: 1.9;
+    opacity: 0.85;
+    margin-bottom: 50px;
+    text-align: justify;
+}
+
+/* Fabric composition table */
+.fabric-table {
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.fabric-row {
+    display: grid;
+    grid-template-columns: 1.2fr 2fr 1.8fr 1fr;
+    gap: 16px;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    font-size: 14px;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.fabric-header {
+    font-size: 11px;
+    letter-spacing: 2px;
+    opacity: 0.55;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.fabric-label {
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 12px;
+    opacity: 1;
+}
+
+.sus-right {
+    flex: 1;
+    display: flex;
+    gap: 16px;
+    align-self: stretch;
+}
+
+.sus-right img {
+    flex: 1;
+    width: 50%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* =============================================
+   SECTION 14 — HORIZONTAL CAROUSEL
+   2 slides: Sustainable + Reflect
+   ============================================= */
+.hero14 {
+    background: #413749;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
+    position: relative;
 }
 
-.hero8::-webkit-scrollbar {
+.hero14::-webkit-scrollbar {
     display: none;
 }
 
-.hero8-track {
+.carousel-track {
     display: flex;
-    height: 600px;
     width: max-content;
 }
 
-.s-text {
-    flex: 0 0 360px;
+.c-slide {
+    width: 100vw;
+    height: 600px;
+    display: flex;
+    scroll-snap-align: start;
+    flex-shrink: 0;
+}
+
+/* Slide 1 — Sustainable */
+.c-sus {
+    background: #413749;
+}
+
+.c-sus-text {
+    flex: 0 0 420px;
     color: white;
-    padding: 50px 50px;
+    padding: 60px 60px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    scroll-snap-align: start;
 }
 
-.s-text h2 {
-    font-size: 24px;
-    letter-spacing: 3px;
+.c-sus-text h2 {
+    font-size: 14px;
+    letter-spacing: 4px;
     font-weight: 700;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
+    opacity: 0.8;
 }
 
-.s-text h3 {
-    font-size: 22px;
+.c-sus-text h3 {
+    font-size: 36px;
     font-weight: 300;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
 }
 
-.s-text h3 em {
+.c-sus-text h3 em {
     font-style: italic;
 }
 
-.s-text p {
+.c-sus-text p {
     font-size: 15px;
     line-height: 1.9;
     opacity: 0.85;
     text-align: justify;
 }
 
-.s-img1 {
-    flex: 0 0 420px;
-    scroll-snap-align: start;
+.c-sus-img {
+    flex: 1;
 }
 
-.s-img1 img {
+.c-sus-img img {
     width: 100%;
     height: 100%;
     display: block;
     object-fit: cover;
 }
 
-.s-img2 {
-    flex: 0 0 420px;
-    scroll-snap-align: start;
+/* Slide 2 — Reflect */
+.c-reflect {
+    background: #2d2040;
 }
 
-.s-img2 img {
+.c-reflect-img {
+    flex: 1;
+}
+
+.c-reflect-img img {
     width: 100%;
     height: 100%;
     display: block;
     object-fit: cover;
 }
 
-.r-text {
-    flex: 0 0 360px;
-    scroll-snap-align: start;
+.c-reflect-text {
+    flex: 0 0 420px;
     color: white;
-    padding: 50px 40px;
+    padding: 60px 60px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 .reflect-small {
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 400;
     margin-bottom: 8px;
     opacity: 0.75;
 }
 
-.r-text h2 {
-    font-size: 36px;
+.c-reflect-text h2 {
+    font-size: 38px;
     font-weight: 700;
     line-height: 1.2;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
 }
 
-.r-text h2 em {
+.c-reflect-text h2 em {
     font-style: italic;
     font-weight: 300;
 }
 
-.r-text p {
+.c-reflect-text p {
     font-size: 15px;
     line-height: 1.9;
     opacity: 0.85;
     text-align: justify;
 }
+
+/* Carousel dots */
+.carousel-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.c-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.35);
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.active-c-dot {
+    background: white;
+}
+
+/* =============================================
+   SECTION 15 — TESTIMONIAL: ANAND MUMBARKAR
+   ============================================= */
+.hero15 {
+    padding: 80px;
+    background: white;
+}
+
+/* Reuses .testimonial-container, .testimonial-image, .testimonial-text,
+   .quote-open, .quote-close, .author, .author-name, .author-role
+   — all already defined for hero12 */
 
 .hero9 {
     display: flex;
@@ -830,6 +980,36 @@ hr {
 }
 
 /* =============================================
+   MEDIUM SCREENS — 768px to 1100px
+   Prevents hero2 from breaking on laptops/tablets in landscape
+   ============================================= */
+@media (max-width: 1100px) and (min-width: 769px) {
+    .hero2 {
+        padding: 80px 40px;
+    }
+    .product-row {
+        gap: 50px;
+    }
+    .left-side img {
+        width: 300px;
+    }
+    .right-side {
+        width: 320px;
+        padding-right: 10px;
+    }
+    .description {
+        width: 100%;
+    }
+    .note {
+        width: 55%;
+        margin-right: 40px;
+    }
+    .sus-inner {
+        gap: 40px;
+    }
+}
+
+/* =============================================
    INDUSTRY-STANDARD RESPONSIVE CSS
    Uses clamp() for fluid type & spacing.
    Breakpoints: 480px (phones), 768px (tablets)
@@ -979,26 +1159,58 @@ html, body {
         font-size: 14px;
     }
 
-    /* --- HERO 8: SUSTAINABLE HORIZONTAL SCROLL ---
-       Panels shrink slightly to show "peek" of next panel
-       so users know they can scroll                        */
-    .hero8-track {
-        height: 460px;
+    /* --- HERO 8: SUSTAINABLE (full section) --- */
+    .hero8 {
+        padding: 50px 20px;
     }
 
-    .s-text {
-        flex: 0 0 300px;
-        padding: 30px 24px;
+    .sus-inner {
+        flex-direction: column;
+        gap: 30px;
     }
 
-    .s-img1,
-    .s-img2 {
-        flex: 0 0 280px;
+    .sus-right {
+        flex-direction: row;
+        height: 260px;
     }
 
-    .r-text {
-        flex: 0 0 300px;
-        padding: 30px 24px;
+    .sus-right img {
+        width: 50%;
+        height: 100%;
+    }
+
+    .fabric-row {
+        grid-template-columns: 1fr 1.5fr;
+        font-size: 12px;
+    }
+
+    /* hide source + benefit columns on mobile — too cramped */
+    .fabric-row span:nth-child(3),
+    .fabric-row span:nth-child(4) {
+        display: none;
+    }
+
+    /* --- HERO 14: CAROUSEL --- */
+    .c-slide {
+        width: 100vw;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .c-sus-text,
+    .c-reflect-text {
+        flex: none;
+        padding: 30px 20px;
+    }
+
+    .c-sus-img,
+    .c-reflect-img {
+        height: 250px;
+    }
+
+    /* --- HERO 15: ANAND TESTIMONIAL --- */
+    .hero15 {
+        padding: 50px 20px;
     }
 
     /* --- HERO 9: DEVIL IN DETAILS --- */

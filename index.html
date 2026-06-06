@@ -175,41 +175,47 @@
         </div>
     </section>
 
-    <!-- SECTION 8: SUSTAINABLE — horizontal scroll -->
+    <!-- SECTION 8: SUSTAINABLE PERFORMANCE — full section with fabric table -->
     <section class="hero8">
 
-        <div class="hero8-track">
+        <div class="sus-inner">
 
-            <div class="s-text">
-                <h2>SUSTAINABLE</h2>
-                <h3><em>Performance</em></h3>
-                <p>
+            <div class="sus-left">
+                <h2 class="sus-heading">SUSTAINABLE</h2>
+                <h3 class="sus-sub"><em>Performance</em></h3>
+                <p class="sus-copy">
                     The Distance Running Tights are crafted with recycled polyester
                     with its source originating in discarded plastic bottles. The liner
                     is recycled nylon from ocean and industrial waste. It fits in
                     perfectly with our ethic of bringing high performance with sustainability.
                 </p>
+
+                <!-- Fabric Composition Table -->
+                <div class="fabric-table">
+                    <div class="fabric-row fabric-header">
+                        <span>COMPONENT</span>
+                        <span>COMPOSITION</span>
+                        <span>SOURCE</span>
+                        <span>BENEFIT</span>
+                    </div>
+                    <div class="fabric-row">
+                        <span class="fabric-label">OUTER FABRIC</span>
+                        <span>87% Recycled Polyester + 13% Elastane</span>
+                        <span>From plastic bottles and industrial waste</span>
+                        <span>For stretch</span>
+                    </div>
+                    <div class="fabric-row">
+                        <span class="fabric-label">INNER LINER</span>
+                        <span>82% Recycled Nylon + 18% Elastane</span>
+                        <span>From Ocean Waste</span>
+                        <span>For stretch</span>
+                    </div>
+                </div>
             </div>
 
-            <div class="s-img1">
+            <div class="sus-right">
                 <img src="image1.jpg" alt="Outer fabric detail">
-            </div>
-
-            <div class="s-img2">
                 <img src="image2.jpg" alt="Inner liner detail">
-            </div>
-
-            <div class="r-text">
-                <p class="reflect-small">Details that</p>
-                <h2>REFLECT <em>Well on you</em></h2>
-                <p>
-                    4 a.m. runs, midnight runs. The price we pay for maintaining
-                    a training-life balance is running in the dark, literally.
-                    And it becomes difficult for runners to be seen, especially
-                    in the darker hours. With a reflective graphic in the back
-                    and front, the Distance Running Tights ensure you are always
-                    spotted while running.
-                </p>
             </div>
 
         </div>
@@ -383,6 +389,95 @@
 
     </section>
 
+    <!-- SECTION 14: HORIZONTAL CAROUSEL — Sustainable + Reflect (2 slides) -->
+    <section class="hero14">
+
+        <div class="carousel-track">
+
+            <div class="c-slide c-sus">
+                <div class="c-sus-text">
+                    <h2>SUSTAINABLE</h2>
+                    <h3><em>Performance</em></h3>
+                    <p>
+                        The Distance Running Tights are crafted with recycled polyester
+                        with its source originating in discarded plastic bottles. The liner
+                        is recycled nylon from ocean and industrial waste. It fits in
+                        perfectly with our ethic of bringing high performance with sustainability.
+                    </p>
+                </div>
+                <div class="c-sus-img">
+                    <img src="image1.jpg" alt="Sustainable fabric detail">
+                </div>
+            </div>
+
+            <div class="c-slide c-reflect">
+                <div class="c-reflect-img">
+                    <img src="image2.jpg" alt="Reflective detail">
+                </div>
+                <div class="c-reflect-text">
+                    <p class="reflect-small">Details that</p>
+                    <h2>REFLECT <em>Well on you</em></h2>
+                    <p>
+                        4 a.m. runs, midnight runs. The price we pay for maintaining
+                        a training-life balance is running in the dark, literally.
+                        And it becomes difficult for runners to be seen, especially
+                        in the darker hours. With a reflective graphic in the back
+                        and front, the Distance Running Tights ensure you are always
+                        spotted while running.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="carousel-dots">
+            <span class="c-dot active-c-dot"></span>
+            <span class="c-dot"></span>
+        </div>
+
+    </section>
+
+    <!-- SECTION 15: TESTIMONIAL — Anand Mumbarkar -->
+    <section class="hero15">
+
+        <div class="testimonial-container">
+
+            <div class="testimonial-image">
+                <img src="anand.jpg" alt="Anand Mumbarkar">
+            </div>
+
+            <div class="testimonial-text">
+
+                <span class="quote-open">&#8220;</span>
+
+                <p>
+                    TATA Mumbai Marathon is always special.
+                    Went in with a target of 3:30–3:40, but finished at 3:32.
+                    The last 7 km were brutal, yet those moments teach you the most.
+                </p>
+                <p>
+                    This year I ran in Athlos Zero Tee and Distance Tights.
+                    Super light fabric, amazing comfort, and most importantly
+                    no chafing or rashes throughout the race.
+                </p>
+                <p>
+                    Grateful to Athlos for trusting me with the Distance Tights
+                    a week before their official launch. Loved every mile in them.
+                </p>
+
+                <span class="quote-close">&#8221;</span>
+
+                <div class="author">
+                    <p class="author-name">Anand Mumbarkar</p>
+                    <p class="author-role">Dentist &amp; Ultra Runner</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
     <!-- JAVASCRIPT — colour and size selector interactivity -->
     <script>
 
@@ -400,6 +495,19 @@
             });
             clicked.classList.add('active-size');
             document.getElementById('selectedSize').textContent = clicked.textContent;
+        }
+
+        /* Carousel scroll → update dots */
+        var carousel = document.querySelector('.hero14');
+        if (carousel) {
+            carousel.addEventListener('scroll', function() {
+                var dots = document.querySelectorAll('.c-dot');
+                var scrolled = carousel.scrollLeft;
+                var width = carousel.offsetWidth;
+                var index = Math.round(scrolled / width);
+                dots.forEach(function(d) { d.classList.remove('active-c-dot'); });
+                if (dots[index]) { dots[index].classList.add('active-c-dot'); }
+            });
         }
 
     </script>
