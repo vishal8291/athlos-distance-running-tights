@@ -820,3 +820,220 @@ hr {
     height: 120px;
     object-fit: contain;
 }
+
+/* =============================================
+   MOBILE RESPONSIVE — screens 768px and below
+   ============================================= */
+
+@media (max-width: 768px) {
+
+    /* --- HERO 1 --- */
+    .title h1 {
+        font-size: 36px;
+        white-space: normal;
+    }
+
+    .title .category {
+        font-size: 12px;
+    }
+
+    .title .subtitle {
+        font-size: 11px;
+        letter-spacing: 3px;
+    }
+
+    /* --- HERO 2: PRODUCT --- */
+    .hero2 {
+        padding: 50px 20px;
+    }
+
+    .description {
+        width: 100%;
+        margin-bottom: 40px;
+        font-size: 14px;
+    }
+
+    .product-row {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .left-side img {
+        width: 100%;
+    }
+
+    .right-side {
+        width: 100%;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .preorder,
+    .wishlist {
+        justify-content: center;
+        padding: 14px 20px;
+    }
+
+    .note {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    /* --- HERO 3: LINER --- */
+    .hero3 {
+        padding: 50px 20px;
+    }
+
+    .feature-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .feature-text {
+        max-width: 100%;
+    }
+
+    .feature-text h2 {
+        font-size: 36px;
+    }
+
+    /* --- HERO 4: MID COMPRESSION --- */
+    .hero4 {
+        padding: 50px 20px;
+    }
+
+    .content {
+        width: 100%;
+    }
+
+    .content h1 {
+        font-size: 26px;
+    }
+
+    /* --- HERO 5: IMAGE ROWS --- */
+    .hero5-row2 {
+        flex-direction: column;
+    }
+
+    .hero5-left img {
+        height: auto;
+        object-fit: unset;
+    }
+
+    /* --- HERO 7: RECOMMENDED --- */
+    .hero7 {
+        padding: 50px 20px;
+    }
+
+    .recommended h2 {
+        font-size: 26px;
+    }
+
+    /* --- HERO 8: SUSTAINABLE SCROLL --- */
+    .s-text {
+        flex: 0 0 280px;
+        padding: 30px 25px;
+    }
+
+    .s-img1,
+    .s-img2 {
+        flex: 0 0 300px;
+    }
+
+    .r-text {
+        flex: 0 0 280px;
+        padding: 30px 25px;
+    }
+
+    .hero8-track {
+        height: 500px;
+    }
+
+    /* --- HERO 9: DEVIL IN DETAILS --- */
+    .hero9 {
+        flex-direction: column;
+        min-height: unset;
+    }
+
+    .devil-text {
+        padding: 50px 20px;
+    }
+
+    .devil-text h2 {
+        font-size: 32px;
+    }
+
+    .devil-image img {
+        height: 300px;
+    }
+
+    /* --- HERO 10: POCKET VIDEOS --- */
+    .hero10 {
+        padding: 50px 20px;
+    }
+
+    .pocket-header h2 {
+        font-size: 26px;
+    }
+
+    .pocket-grid {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .pocket-card {
+        width: calc(50% - 10px);
+    }
+
+    /* --- HERO 12: TESTIMONIAL --- */
+    .hero12 {
+        padding: 50px 20px;
+    }
+
+    .testimonial-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .testimonial-image {
+        width: 100%;
+    }
+
+    /* --- HERO 13: WASH AND CARE --- */
+    .hero13 {
+        padding: 50px 20px;
+    }
+
+    .care-header {
+        margin-bottom: 40px;
+    }
+
+    .care-header h2 {
+        font-size: 24px;
+    }
+
+    .care-grid {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .care-card {
+        flex: 0 0 calc(50% - 1px);
+        border-right: none;
+        border-bottom: 1px solid #e8e8e8;
+        padding: 25px 15px;
+    }
+
+    .care-card:last-child {
+        border-bottom: none;
+    }
+
+    .care-icon img {
+        width: 90px;
+        height: 90px;
+    }
+
+}
