@@ -8,12 +8,17 @@
 
 <body>
 
+    <!-- SECTION 1: HERO — background image in CSS, all text in HTML -->
     <section class="hero">
         <div class="title">
+            <p class="category">Men's</p>
+            <h1>Distance Running <span>TIGHTS</span></h1>
+            <p class="subtitle">Mid Compression</p>
             <p class="arrow">&#8964;</p>
         </div>
     </section>
 
+    <!-- SECTION 2: PRODUCT -->
     <section class="hero2">
 
         <div class="description">
@@ -51,30 +56,30 @@
 
                 <hr>
 
-                <h4>Colour : <span class="color-name">Jet Black</span></h4>
+                <h4>Colour : <span class="color-name" id="colorName">Jet Black</span></h4>
 
                 <div class="colors">
-                    <span class="color black active-color"></span>
-                    <span class="color navy"></span>
-                    <span class="color blue"></span>
-                    <span class="color purple"></span>
-                    <span class="color maroon"></span>
-                    <span class="color pink"></span>
+                    <span class="color black active-color" data-name="Jet Black" onclick="selectColor(this)"></span>
+                    <span class="color navy" data-name="Dark Navy" onclick="selectColor(this)"></span>
+                    <span class="color blue" data-name="Steel Blue" onclick="selectColor(this)"></span>
+                    <span class="color purple" data-name="Deep Purple" onclick="selectColor(this)"></span>
+                    <span class="color maroon" data-name="Wine Red" onclick="selectColor(this)"></span>
+                    <span class="color pink" data-name="Blush Pink" onclick="selectColor(this)"></span>
                 </div>
 
                 <hr>
 
                 <div class="size-header">
-                    <span>Size : S</span>
+                    <span>Size : <span id="selectedSize">S</span></span>
                     <a href="#">Size Chart</a>
                 </div>
 
                 <div class="sizes">
-                    <button class="size-btn active-size">S</button>
-                    <button class="size-btn">M</button>
-                    <button class="size-btn">L</button>
-                    <button class="size-btn">XL</button>
-                    <button class="size-btn">XXL</button>
+                    <button class="size-btn active-size" onclick="selectSize(this)">S</button>
+                    <button class="size-btn" onclick="selectSize(this)">M</button>
+                    <button class="size-btn" onclick="selectSize(this)">L</button>
+                    <button class="size-btn" onclick="selectSize(this)">XL</button>
+                    <button class="size-btn" onclick="selectSize(this)">XXL</button>
                 </div>
 
                 <div class="buttons">
@@ -101,6 +106,7 @@
 
     </section>
 
+    <!-- SECTION 3: LINER -->
     <section class="hero3">
         <div class="feature-container">
 
@@ -122,6 +128,7 @@
         </div>
     </section>
 
+    <!-- SECTION 4: MID COMPRESSION -->
     <section class="hero4">
         <div class="content">
             <h1><em>Rational for</em> mid-compression</h1>
@@ -136,6 +143,7 @@
         </div>
     </section>
 
+    <!-- SECTION 5: IMAGE ROWS -->
     <section class="hero5">
 
         <div class="hero5-row1">
@@ -153,6 +161,7 @@
 
     </section>
 
+    <!-- SECTION 6: TWO PHOTOS -->
     <section class="hero6">
         <div class="two-photos">
             <img src="image.jpg" alt="Athlete 1">
@@ -160,6 +169,7 @@
         </div>
     </section>
 
+    <!-- SECTION 7: RECOMMENDED FOR -->
     <section class="hero7">
         <div class="recommended">
             <h2>Recommended <em>for</em></h2>
@@ -167,42 +177,48 @@
         </div>
     </section>
 
+    <!-- SECTION 8: SUSTAINABLE — horizontal scroll -->
     <section class="hero8">
 
-        <div class="s-text">
-            <h2>SUSTAINABLE</h2>
-            <h3><em>Performance</em></h3>
-            <p>
-                The Distance Running Tights are crafted with recycled polyester
-                with its source originating in discarded plastic bottles. The liner
-                is recycled nylon from ocean and industrial waste. It fits in
-                perfectly with our ethic of bringing high performance with sustainability.
-            </p>
-        </div>
+        <div class="hero8-track">
 
-        <div class="s-img1">
-            <img src="image1.jpg" alt="Outer fabric detail">
-        </div>
+            <div class="s-text">
+                <h2>SUSTAINABLE</h2>
+                <h3><em>Performance</em></h3>
+                <p>
+                    The Distance Running Tights are crafted with recycled polyester
+                    with its source originating in discarded plastic bottles. The liner
+                    is recycled nylon from ocean and industrial waste. It fits in
+                    perfectly with our ethic of bringing high performance with sustainability.
+                </p>
+            </div>
 
-        <div class="s-img2">
-            <img src="image2.jpg" alt="Inner liner detail">
-        </div>
+            <div class="s-img1">
+                <img src="image1.jpg" alt="Outer fabric detail">
+            </div>
 
-        <div class="r-text">
-            <p class="reflect-small">Details that</p>
-            <h2>REFLECT <em>Well on you</em></h2>
-            <p>
-                4 a.m. runs, midnight runs. The price we pay for maintaining
-                a training-life balance is running in the dark, literally.
-                And it becomes difficult for runners to be seen, especially
-                in the darker hours. With a reflective graphic in the back
-                and front, the Distance Running Tights ensure you are always
-                spotted while running.
-            </p>
+            <div class="s-img2">
+                <img src="image2.jpg" alt="Inner liner detail">
+            </div>
+
+            <div class="r-text">
+                <p class="reflect-small">Details that</p>
+                <h2>REFLECT <em>Well on you</em></h2>
+                <p>
+                    4 a.m. runs, midnight runs. The price we pay for maintaining
+                    a training-life balance is running in the dark, literally.
+                    And it becomes difficult for runners to be seen, especially
+                    in the darker hours. With a reflective graphic in the back
+                    and front, the Distance Running Tights ensure you are always
+                    spotted while running.
+                </p>
+            </div>
+
         </div>
 
     </section>
 
+    <!-- SECTION 9: DEVIL IN THE DETAILS -->
     <section class="hero9">
 
         <div class="devil-text">
@@ -220,6 +236,7 @@
 
     </section>
 
+    <!-- SECTION 10: POCKET VIDEOS -->
     <section class="hero10">
 
         <div class="pocket-header">
@@ -261,10 +278,12 @@
 
     </section>
 
+    <!-- SECTION 11: COMMUNITY PHOTO -->
     <section class="hero11">
         <img src="bottle.jpg" alt="Running community">
     </section>
 
+    <!-- SECTION 12: TESTIMONIAL -->
     <section class="hero12">
 
         <div class="testimonial-container">
@@ -313,6 +332,7 @@
 
     </section>
 
+    <!-- SECTION 13: WASH AND CARE -->
     <section class="hero13">
 
         <div class="care-header">
@@ -364,6 +384,27 @@
         </div>
 
     </section>
+
+    <!-- JAVASCRIPT — colour and size selector interactivity -->
+    <script>
+
+        function selectColor(clicked) {
+            document.querySelectorAll('.color').forEach(function(el) {
+                el.classList.remove('active-color');
+            });
+            clicked.classList.add('active-color');
+            document.getElementById('colorName').textContent = clicked.getAttribute('data-name');
+        }
+
+        function selectSize(clicked) {
+            document.querySelectorAll('.size-btn').forEach(function(el) {
+                el.classList.remove('active-size');
+            });
+            clicked.classList.add('active-size');
+            document.getElementById('selectedSize').textContent = clicked.textContent;
+        }
+
+    </script>
 
 </body>
 
