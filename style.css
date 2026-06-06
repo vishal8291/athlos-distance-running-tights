@@ -394,20 +394,6 @@ hr {
     display: block;
 }
 
-.hero6 {
-    line-height: 0;
-}
-
-.two-photos {
-    display: flex;
-}
-
-.two-photos img {
-    width: 50%;
-    display: block;
-    object-fit: cover;
-    height: 550px;
-}
 
 .hero7 {
     padding: 90px 20px;
