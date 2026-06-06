@@ -90,12 +90,12 @@ body {
 }
 
 .description {
-    width: 600px;
+    width: 680px;
     margin: 0 auto 80px;
-    line-height: 1.8;
+    line-height: 1.9;
     color: #555;
-    text-align: center;
-    font-size: 15px;
+    text-align: justify;
+    font-size: 17px;
 }
 
 .product-row {
@@ -110,7 +110,7 @@ body {
 }
 
 .left-side img {
-    width: 320px;
+    width: 420px;
     display: block;
     margin: 0 auto;
 }
@@ -133,11 +133,12 @@ body {
 }
 
 .right-side {
-    width: 380px;
+    width: 400px;
+    padding-right: 40px;
 }
 
 .right-side h2 {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 400;
     margin-bottom: 20px;
 }
@@ -150,18 +151,18 @@ body {
 }
 
 .main-price {
-    font-size: 26px;
+    font-size: 30px;
     font-weight: 600;
 }
 
 .offer {
-    font-size: 14px;
+    font-size: 16px;
     color: #a3834f;
 }
 
 .tax {
     color: #888;
-    font-size: 13px;
+    font-size: 15px;
     margin-bottom: 20px;
 }
 
@@ -211,7 +212,7 @@ hr {
     gap: 20px;
     align-items: center;
     margin-bottom: 15px;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .size-header a {
@@ -225,13 +226,13 @@ hr {
 }
 
 .size-btn {
-    width: 40px;
-    height: 40px;
+    width: 46px;
+    height: 46px;
     border-radius: 50%;
     border: 1px solid #ccc;
     background: white;
     cursor: pointer;
-    font-size: 13px;
+    font-size: 15px;
     font-family: "Times New Roman", Times, serif;
     transition: border-color 0.2s, background 0.2s;
 }
@@ -256,10 +257,10 @@ hr {
     background: #a3834f;
     color: white;
     border: none;
-    padding: 14px 36px;
+    padding: 16px 40px;
     border-radius: 30px;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 16px;
     font-family: "Times New Roman", Times, serif;
     display: flex;
     align-items: center;
@@ -275,10 +276,10 @@ hr {
     background: white;
     border: 1px solid #a3834f;
     color: #a3834f;
-    padding: 14px 36px;
+    padding: 16px 40px;
     border-radius: 30px;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 16px;
     font-family: "Times New Roman", Times, serif;
     display: flex;
     align-items: center;
@@ -291,21 +292,22 @@ hr {
 
 .availability {
     margin-top: 18px;
-    font-size: 13px;
+    font-size: 15px;
     color: #a3834f;
     text-align: center;
 }
 
 .note {
-    width: 600px;
-    margin: 100px auto 0;
-    line-height: 1.8;
-    font-size: 15px;
+    width: 44%;
+    margin: 80px 80px 0 auto;
+    line-height: 1.9;
+    font-size: 17px;
     color: #444;
+    text-align: justify;
 }
 
 .note h4 {
-    font-size: 15px;
+    font-size: 17px;
     margin-bottom: 12px;
     font-weight: 600;
 }
@@ -352,9 +354,10 @@ hr {
 }
 
 .feature-text p {
-    font-size: 16px;
+    font-size: 17px;
     line-height: 1.9;
     opacity: 0.9;
+    text-align: justify;
 }
 
 .hero4 {
@@ -381,9 +384,10 @@ hr {
 }
 
 .content p {
-    font-size: 15px;
+    font-size: 17px;
     line-height: 1.9;
     color: #555;
+    text-align: justify;
 }
 
 .hero5 {
@@ -439,7 +443,7 @@ hr {
 }
 
 .recommended p {
-    font-size: 15px;
+    font-size: 17px;
     color: #555;
     letter-spacing: 1px;
 }
@@ -490,9 +494,10 @@ hr {
 }
 
 .s-text p {
-    font-size: 13px;
+    font-size: 15px;
     line-height: 1.9;
     opacity: 0.85;
+    text-align: justify;
 }
 
 .s-img1 {
@@ -549,9 +554,10 @@ hr {
 }
 
 .r-text p {
-    font-size: 13px;
+    font-size: 15px;
     line-height: 1.9;
     opacity: 0.85;
+    text-align: justify;
 }
 
 .hero9 {
@@ -582,9 +588,10 @@ hr {
 }
 
 .devil-text p {
-    font-size: 15px;
+    font-size: 17px;
     line-height: 1.9;
     color: #555;
+    text-align: justify;
 }
 
 .devil-image {
@@ -619,7 +626,7 @@ hr {
 }
 
 .pocket-header p {
-    font-size: 15px;
+    font-size: 17px;
     color: #555;
     line-height: 1.8;
     max-width: 500px;
@@ -715,10 +722,11 @@ hr {
 }
 
 .testimonial-text p {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.9;
     color: #444;
     margin-bottom: 15px;
+    text-align: justify;
 }
 
 .author {
@@ -796,7 +804,7 @@ hr {
 }
 
 .care-label {
-    font-size: 13px;
+    font-size: 15px;
     line-height: 1.8;
     color: #555;
     flex: 1;
