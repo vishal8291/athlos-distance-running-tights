@@ -23,6 +23,7 @@ body {
     bottom: 15%;
     left: 8%;
     color: white;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 .title .category {
@@ -159,6 +160,11 @@ hr {
     height: 20px;
     border-radius: 50%;
     cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.color:hover {
+    transform: scale(1.2);
 }
 
 .active-color {
@@ -200,6 +206,11 @@ hr {
     cursor: pointer;
     font-size: 13px;
     font-family: Georgia, serif;
+    transition: border-color 0.2s, background 0.2s;
+}
+
+.size-btn:hover {
+    border-color: #a3834f;
 }
 
 .active-size {
@@ -359,10 +370,12 @@ hr {
 
 .hero5-row2 {
     display: flex;
+    align-items: stretch;
 }
 
 .hero5-left {
     flex: 1;
+    overflow: hidden;
 }
 
 .hero5-left img {
@@ -423,6 +436,11 @@ hr {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+
+.hero8::-webkit-scrollbar {
+    display: none;
 }
 
 .hero8-track {
@@ -608,7 +626,7 @@ hr {
 }
 
 .pocket-card video {
-    width: 200px;
+    width: 100%;
     height: 220px;
     object-fit: cover;
     border-radius: 10px;
