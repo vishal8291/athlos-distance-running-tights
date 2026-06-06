@@ -822,19 +822,57 @@ hr {
 }
 
 /* =============================================
-   MOBILE RESPONSIVE — screens 768px and below
+   INDUSTRY-STANDARD RESPONSIVE CSS
+   Uses clamp() for fluid type & spacing.
+   Breakpoints: 480px (phones), 768px (tablets)
    ============================================= */
 
+/* --- GLOBAL: prevent horizontal overflow on all screens --- */
+html, body {
+    overflow-x: hidden;
+}
+
+/* --- FLUID TYPOGRAPHY on all screen sizes (desktop included) ---
+   clamp(min, preferred, max)
+   preferred = viewport-relative value that scales smoothly        */
+.title h1         { font-size: clamp(28px, 5vw, 64px); }
+.feature-text h2  { font-size: clamp(28px, 4vw, 52px); }
+.content h1       { font-size: clamp(22px, 3vw, 34px); }
+.recommended h2   { font-size: clamp(22px, 3vw, 36px); }
+.devil-text h2    { font-size: clamp(26px, 3.5vw, 44px); }
+.pocket-header h2 { font-size: clamp(22px, 3vw, 36px); }
+.care-header h2   { font-size: clamp(22px, 2.5vw, 34px); }
+.r-text h2        { font-size: clamp(22px, 3vw, 36px); }
+
+/* --- FIX: hero must clip overflowing text on small screens --- */
+.hero {
+    overflow: hidden;
+}
+
+/* =============================================
+   TABLET — 768px and below
+   ============================================= */
 @media (max-width: 768px) {
 
     /* --- HERO 1 --- */
+    .hero {
+        background-position: 65% center;
+    }
+
+    .title {
+        bottom: 14%;
+        left: 5%;
+        right: 5%;
+    }
+
     .title h1 {
-        font-size: 36px;
-        white-space: normal;
+        white-space: nowrap;
+        font-size: clamp(20px, 6.5vw, 40px);
     }
 
     .title .category {
         font-size: 12px;
+        letter-spacing: 2px;
     }
 
     .title .subtitle {
@@ -844,22 +882,22 @@ hr {
 
     /* --- HERO 2: PRODUCT --- */
     .hero2 {
-        padding: 50px 20px;
+        padding: clamp(30px, 6vw, 60px) clamp(16px, 5vw, 40px);
     }
 
     .description {
         width: 100%;
-        margin-bottom: 40px;
+        margin-bottom: 36px;
         font-size: 14px;
     }
 
     .product-row {
         flex-direction: column;
-        gap: 40px;
+        gap: 36px;
     }
 
     .left-side img {
-        width: 100%;
+        width: 80%;
     }
 
     .right-side {
@@ -874,43 +912,40 @@ hr {
     .preorder,
     .wishlist {
         justify-content: center;
-        padding: 14px 20px;
+        padding: 16px 20px;
+        min-height: 52px;          /* touch-friendly — min 44px */
     }
 
     .note {
         width: 100%;
-        margin-top: 50px;
+        margin-top: 40px;
     }
 
     /* --- HERO 3: LINER --- */
     .hero3 {
-        padding: 50px 20px;
+        padding: clamp(40px, 7vw, 80px) clamp(20px, 5vw, 50px);
     }
 
     .feature-container {
         flex-direction: column;
-        gap: 30px;
+        gap: 32px;
     }
 
     .feature-text {
         max-width: 100%;
     }
 
-    .feature-text h2 {
-        font-size: 36px;
+    .feature-text p {
+        font-size: 15px;
     }
 
     /* --- HERO 4: MID COMPRESSION --- */
     .hero4 {
-        padding: 50px 20px;
+        padding: clamp(40px, 7vw, 80px) clamp(20px, 5vw, 40px);
     }
 
     .content {
         width: 100%;
-    }
-
-    .content h1 {
-        font-size: 26px;
     }
 
     /* --- HERO 5: IMAGE ROWS --- */
@@ -918,38 +953,44 @@ hr {
         flex-direction: column;
     }
 
+    .hero5-left {
+        height: 260px;
+    }
+
     .hero5-left img {
-        height: auto;
-        object-fit: unset;
+        height: 100%;
+        object-fit: cover;
     }
 
     /* --- HERO 7: RECOMMENDED --- */
     .hero7 {
-        padding: 50px 20px;
+        padding: clamp(40px, 7vw, 80px) clamp(20px, 5vw, 40px);
     }
 
-    .recommended h2 {
-        font-size: 26px;
+    .recommended p {
+        font-size: 14px;
     }
 
-    /* --- HERO 8: SUSTAINABLE SCROLL --- */
+    /* --- HERO 8: SUSTAINABLE HORIZONTAL SCROLL ---
+       Panels shrink slightly to show "peek" of next panel
+       so users know they can scroll                        */
+    .hero8-track {
+        height: 460px;
+    }
+
     .s-text {
-        flex: 0 0 280px;
-        padding: 30px 25px;
+        flex: 0 0 300px;
+        padding: 30px 24px;
     }
 
     .s-img1,
     .s-img2 {
-        flex: 0 0 300px;
+        flex: 0 0 280px;
     }
 
     .r-text {
-        flex: 0 0 280px;
-        padding: 30px 25px;
-    }
-
-    .hero8-track {
-        height: 500px;
+        flex: 0 0 300px;
+        padding: 30px 24px;
     }
 
     /* --- HERO 9: DEVIL IN DETAILS --- */
@@ -959,60 +1000,60 @@ hr {
     }
 
     .devil-text {
-        padding: 50px 20px;
-    }
-
-    .devil-text h2 {
-        font-size: 32px;
+        padding: clamp(40px, 7vw, 80px) clamp(20px, 5vw, 60px);
     }
 
     .devil-image img {
-        height: 300px;
+        height: 320px;
+        object-fit: cover;
     }
 
     /* --- HERO 10: POCKET VIDEOS --- */
     .hero10 {
-        padding: 50px 20px;
+        padding: clamp(40px, 7vw, 80px) clamp(20px, 5vw, 60px);
     }
 
-    .pocket-header h2 {
-        font-size: 26px;
+    .pocket-header {
+        margin-bottom: 36px;
     }
 
     .pocket-grid {
         flex-wrap: wrap;
-        gap: 20px;
+        gap: 24px;
+        justify-content: center;
     }
 
     .pocket-card {
-        width: calc(50% - 10px);
+        width: calc(50% - 12px);
+        flex-shrink: 0;
+    }
+
+    .pocket-card video {
+        height: 180px;
     }
 
     /* --- HERO 12: TESTIMONIAL --- */
     .hero12 {
-        padding: 50px 20px;
+        padding: clamp(40px, 7vw, 80px) clamp(20px, 5vw, 50px);
     }
 
     .testimonial-container {
         flex-direction: column;
-        gap: 30px;
+        gap: 32px;
     }
 
     .testimonial-image {
         width: 100%;
+        flex-shrink: 1;
     }
 
     /* --- HERO 13: WASH AND CARE --- */
     .hero13 {
-        padding: 50px 20px;
+        padding: clamp(40px, 7vw, 80px) clamp(10px, 3vw, 30px);
     }
 
     .care-header {
-        margin-bottom: 40px;
-    }
-
-    .care-header h2 {
-        font-size: 24px;
+        margin-bottom: 36px;
     }
 
     .care-grid {
@@ -1021,19 +1062,73 @@ hr {
     }
 
     .care-card {
-        flex: 0 0 calc(50% - 1px);
+        flex: 0 0 50%;
         border-right: none;
         border-bottom: 1px solid #e8e8e8;
-        padding: 25px 15px;
+        padding: 24px 12px;
+    }
+
+    .care-card:nth-child(odd) {
+        border-right: 1px solid #e8e8e8;
     }
 
     .care-card:last-child {
+        border-right: none;
         border-bottom: none;
+        flex: 0 0 100%;           /* 5th card takes full width */
     }
 
     .care-icon img {
-        width: 90px;
-        height: 90px;
+        width: 80px;
+        height: 80px;
+    }
+}
+
+/* =============================================
+   SMALL PHONES — 480px and below
+   ============================================= */
+@media (max-width: 480px) {
+
+    /* Hero: at very small screens, let title wrap but stay in view */
+    .title h1 {
+        font-size: clamp(18px, 7.5vw, 30px);
+        white-space: normal;
+        max-width: 85vw;
     }
 
+    .title .subtitle {
+        letter-spacing: 2px;
+    }
+
+    /* Pocket cards — go full width on tiny phones */
+    .pocket-card {
+        width: 100%;
+    }
+
+    /* Care cards — single column on tiny phones */
+    .care-card {
+        flex: 0 0 100%;
+        border-right: none;
+    }
+
+    .care-card:nth-child(odd) {
+        border-right: none;
+    }
+
+    .hero8-track {
+        height: 420px;
+    }
+
+    .s-text {
+        flex: 0 0 260px;
+    }
+
+    .s-img1,
+    .s-img2 {
+        flex: 0 0 240px;
+    }
+
+    .r-text {
+        flex: 0 0 260px;
+    }
 }
