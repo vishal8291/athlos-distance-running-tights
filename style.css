@@ -499,14 +499,15 @@ h4 {
     display: block;
 }
 
-/* Text panel — 409 × 183px */
+/* Text panel — 409px wide, fill height, gap 30px (Figma: 409 Fill □ 30) */
 .feature-text {
     flex: 0 0 409px;
-    height: 183px;
+    height: auto;
     margin-left: 60px;
     color: white;
     display: flex;
     flex-direction: column;
+    gap: 30px;
     justify-content: flex-start;
     overflow: visible;
 }
@@ -521,7 +522,7 @@ h4 {
     font-style: italic;
     font-size: 32px;
     letter-spacing: 0.02em;
-    margin-bottom: 18px;
+    margin-bottom: 0;
     line-height: 1.1;
     color: white;
 }
