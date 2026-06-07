@@ -975,13 +975,22 @@ h4 {
     flex-shrink: 0;
 }
 
-/* Image cards: 300 × 601px */
+/* Image cards */
 .pocket-card img {
     width: 300px;
-    height: 601px;
     object-fit: cover;
     object-position: center;
     display: block;
+}
+
+/* Card 1 — 2 Side Pockets: 300 × 601px */
+.pocket-card:nth-child(1) img {
+    height: 601px;
+}
+
+/* Card 4 — Side waistband pocket: 300 × 623px */
+.pocket-card:nth-child(4) img {
+    height: 623px;
 }
 
 /* Video cards: 300 × 495px */
