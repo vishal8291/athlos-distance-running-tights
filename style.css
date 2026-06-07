@@ -4,7 +4,38 @@
    Primary gold: #B8963E
    ============================================= */
 
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap');
+/* Tesseract = official Athlos brand font (load via @font-face when files available)
+   Jost      = nearest free substitute — same geometric sans-serif DNA
+   Raleway   = final fallback                                               */
+
+/* ── @font-face: uncomment and fill in path when font files are available ──
+@font-face {
+    font-family: 'Tesseract';
+    src: url('Tesseract-ExtraLight.woff2') format('woff2'),
+         url('Tesseract-ExtraLight.ttf')   format('truetype');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tesseract';
+    src: url('Tesseract-Regular.woff2') format('woff2'),
+         url('Tesseract-Regular.ttf')   format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tesseract';
+    src: url('Tesseract-Bold.woff2') format('woff2'),
+         url('Tesseract-Bold.ttf')   format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+── */
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,200;0,300;0,400;0,700;1,200;1,300;1,400;1,700&family=Raleway:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap');
 
 /* ===== ROOT VARIABLES ===== */
 :root {
@@ -14,7 +45,7 @@
     --color-gold-light: #C9A84C;
     --color-dark-bg:    #1A1A1A;
     --color-red-dot:    #FF0000;
-    --font-primary:     'Raleway', sans-serif;
+    --font-primary:     'Tesseract', 'Jost', 'Raleway', sans-serif;
     --gap-xs:  15px;
     --gap-sm:  24px;
     --gap-md:  52px;
@@ -34,7 +65,7 @@ html, body {
 }
 
 body {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Tesseract', 'Jost', 'Raleway', sans-serif;
     background-color: #FFFFFF;
     color: #000000;
 }
@@ -80,7 +111,7 @@ body {
 
 /* "MEN'S" */
 .title .category {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Tesseract', 'Jost', 'Raleway', sans-serif;
     font-weight: 200;
     font-style: italic;
     font-size: 12px;
@@ -92,7 +123,7 @@ body {
 
 /* "Distance Running TIGHTS" */
 .title h1 {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Tesseract', 'Jost', 'Raleway', sans-serif;
     font-size: 48px;
     font-weight: 200;
     font-style: italic;
@@ -110,7 +141,7 @@ body {
 
 /* "MID COMPRESSION" */
 .title .subtitle {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Tesseract', 'Jost', 'Raleway', sans-serif;
     font-weight: 200;
     font-size: 10px;
     letter-spacing: 0.3em;
@@ -156,7 +187,7 @@ body {
     width: 598px;
     max-width: 100%;
     margin: 0 auto 60px;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Tesseract', 'Jost', 'Raleway', sans-serif;
     font-weight: 200;
     font-size: 18px;
     line-height: 1.5;
@@ -219,7 +250,7 @@ body {
 
 /* Product name */
 .right-side h2 {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Tesseract', 'Jost', 'Raleway', sans-serif;
     font-weight: 400;
     font-size: 22px;
     letter-spacing: 0.03em;
@@ -236,7 +267,7 @@ body {
 }
 
 .main-price {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Tesseract', 'Jost', 'Raleway', sans-serif;
     font-weight: 700;
     font-size: 22px;
     letter-spacing: 0.03em;
@@ -244,7 +275,7 @@ body {
 }
 
 .offer {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Tesseract', 'Jost', 'Raleway', sans-serif;
     font-weight: 200;
     font-size: 16px;
     letter-spacing: 0.03em;
@@ -253,7 +284,7 @@ body {
 }
 
 .tax {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Tesseract', 'Jost', 'Raleway', sans-serif;
     font-weight: 200;
     font-size: 12px;
     letter-spacing: 0.03em;
@@ -275,7 +306,7 @@ hr {
 }
 
 h4 {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Tesseract', 'Jost', 'Raleway', sans-serif;
     font-weight: 400;
     font-size: 14px;
     letter-spacing: 0.1em;
@@ -324,7 +355,7 @@ h4 {
     gap: 20px;
     align-items: center;
     margin-bottom: 14px;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Tesseract', 'Jost', 'Raleway', sans-serif;
     font-weight: 400;
     font-size: 14px;
     letter-spacing: 0.1em;
@@ -332,7 +363,7 @@ h4 {
 }
 
 .size-header a {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Tesseract', 'Jost', 'Raleway', sans-serif;
     font-weight: 200;
     font-size: 13px;
     letter-spacing: 0.1em;
@@ -355,7 +386,7 @@ h4 {
     border: 1px solid #000000;
     background-color: transparent;
     cursor: pointer;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Tesseract', 'Jost', 'Raleway', sans-serif;
     font-weight: 400;
     font-size: 14px;
     letter-spacing: 0.05em;
@@ -395,7 +426,7 @@ h4 {
     border: none;
     border-radius: 30px;
     cursor: pointer;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Tesseract', 'Jost', 'Raleway', sans-serif;
     font-weight: 400;
     font-size: 15px;
     letter-spacing: 0.05em;
@@ -418,7 +449,7 @@ h4 {
     border: 1.5px solid var(--color-gold);
     border-radius: 30px;
     cursor: pointer;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Tesseract', 'Jost', 'Raleway', sans-serif;
     font-weight: 400;
     font-size: 15px;
     letter-spacing: 0.05em;
@@ -437,7 +468,7 @@ h4 {
 /* Availability notice — Figma: gold colour, italic, centered */
 .availability {
     margin-top: 14px;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Tesseract', 'Jost', 'Raleway', sans-serif;
     font-weight: 200;
     font-size: 13px;
     font-style: italic;
@@ -451,7 +482,7 @@ h4 {
     width: 598px;
     max-width: 100%;
     margin: 60px auto 0;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Tesseract', 'Jost', 'Raleway', sans-serif;
     font-weight: 200;
     font-size: 18px;
     line-height: 1.5;
@@ -519,7 +550,7 @@ h4 {
    "ONE"  = bold weight 700 upright
    "Liner"= italic weight 200 */
 .feature-text h2 {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Tesseract', 'Jost', 'Raleway', sans-serif;
     font-weight: 200;
     font-style: italic;
     font-size: 32px;
@@ -535,7 +566,7 @@ h4 {
 }
 
 .feature-text p {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Tesseract', 'Jost', 'Raleway', sans-serif;
     font-weight: 200;
     font-size: 16px;
     line-height: 1.6;
@@ -560,7 +591,7 @@ h4 {
 }
 
 .content h1 {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Tesseract', 'Jost', 'Raleway', sans-serif;
     font-weight: 200;
     font-style: italic;
     font-size: 32px;
@@ -575,7 +606,7 @@ h4 {
 }
 
 .content p {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Tesseract', 'Jost', 'Raleway', sans-serif;
     font-weight: 200;
     font-size: 18px;
     line-height: 1.7;
@@ -641,7 +672,7 @@ h4 {
 
 /* "Recommended" bold + "for" italic — gap between heading and sub is part of 103px total */
 .recommended h2 {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Tesseract', 'Jost', 'Raleway', sans-serif;
     font-weight: 700;          /* "Recommended" is bold */
     font-style: normal;
     font-size: 36px;
@@ -658,7 +689,7 @@ h4 {
 
 /* "Distance Running | Ultra Running | High-Intensity Training" */
 .recommended p {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Tesseract', 'Jost', 'Raleway', sans-serif;
     font-weight: 200;
     font-size: 15px;
     letter-spacing: 0.05em;
@@ -701,7 +732,7 @@ h4 {
 
 /* "SUSTAINABLE" — uppercase bold */
 .sus-heading {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Tesseract', 'Jost', 'Raleway', sans-serif;
     font-size: 22px;
     letter-spacing: 0.08em;
     font-weight: 700;
@@ -713,7 +744,7 @@ h4 {
 
 /* "Performance" — italic light */
 .sus-sub {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Tesseract', 'Jost', 'Raleway', sans-serif;
     font-weight: 200;
     font-style: italic;
     font-size: 28px;
@@ -726,7 +757,7 @@ h4 {
 .sus-sub em { font-style: italic; }
 
 .sus-copy {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Tesseract', 'Jost', 'Raleway', sans-serif;
     font-weight: 200;
     font-size: 14px;
     line-height: 1.6;
@@ -762,7 +793,7 @@ h4 {
 }
 
 .fabric-overlay-label {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Tesseract', 'Jost', 'Raleway', sans-serif;
     font-size: 10px;
     letter-spacing: 0.25em;
     font-weight: 400;
@@ -795,7 +826,7 @@ h4 {
 }
 
 .fabric-col-label {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Tesseract', 'Jost', 'Raleway', sans-serif;
     font-size: 10px;
     letter-spacing: 0.2em;
     font-weight: 700;
@@ -811,14 +842,14 @@ h4 {
 }
 
 .fabric-pct {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Tesseract', 'Jost', 'Raleway', sans-serif;
     font-weight: 700;
     font-size: 22px;
     color: white;
 }
 
 .fabric-plus {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Tesseract', 'Jost', 'Raleway', sans-serif;
     font-weight: 200;
     font-size: 16px;
     opacity: 0.6;
@@ -826,14 +857,14 @@ h4 {
 }
 
 .fabric-pct2 {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Tesseract', 'Jost', 'Raleway', sans-serif;
     font-weight: 200;
     font-size: 16px;
     color: white;
 }
 
 .fabric-material {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Tesseract', 'Jost', 'Raleway', sans-serif;
     font-size: 13px;
     font-weight: 200;
     opacity: 0.85;
@@ -842,7 +873,7 @@ h4 {
 }
 
 .fabric-source {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Tesseract', 'Jost', 'Raleway', sans-serif;
     font-size: 11px;
     font-weight: 200;
     font-style: italic;
@@ -877,7 +908,7 @@ h4 {
    "Devil in the" = italic weight 200
    "DETAILS"      = bold weight 700 uppercase */
 .devil-text h2 {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Tesseract', 'Jost', 'Raleway', sans-serif;
     font-weight: 200;
     font-style: italic;
     font-size: 32px;
@@ -896,7 +927,7 @@ h4 {
 }
 
 .devil-text p {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Tesseract', 'Jost', 'Raleway', sans-serif;
     font-weight: 200;
     font-size: 14px;
     line-height: 1.6;
@@ -939,7 +970,7 @@ h4 {
 
 /* "Picking the" italic | "right pocket" bold */
 .pocket-header h2 {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Tesseract', 'Jost', 'Raleway', sans-serif;
     font-weight: 200;
     font-style: italic;
     font-size: 36px;
@@ -955,7 +986,7 @@ h4 {
 }
 
 .pocket-header p {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Tesseract', 'Jost', 'Raleway', sans-serif;
     font-weight: 200;
     font-size: 16px;
     letter-spacing: 0.03em;
@@ -1032,7 +1063,7 @@ h4 {
 
 /* Card label — bold */
 .pocket-card h4 {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Tesseract', 'Jost', 'Raleway', sans-serif;
     font-weight: 700;
     font-size: 14px;
     letter-spacing: 0.05em;
@@ -1042,7 +1073,7 @@ h4 {
 
 /* Card description — light */
 .pocket-card p {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Tesseract', 'Jost', 'Raleway', sans-serif;
     font-weight: 200;
     font-size: 13px;
     letter-spacing: 0.03em;
@@ -1132,7 +1163,7 @@ h4 {
 }
 
 .testimonial-text p {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Tesseract', 'Jost', 'Raleway', sans-serif;
     font-weight: 200;
     font-style: italic;
     font-size: 18px;
@@ -1150,7 +1181,7 @@ h4 {
 }
 
 .author-name {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Tesseract', 'Jost', 'Raleway', sans-serif;
     font-weight: 700;
     font-size: 14px;
     letter-spacing: 0.2em;
@@ -1160,7 +1191,7 @@ h4 {
 }
 
 .author-role {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Tesseract', 'Jost', 'Raleway', sans-serif;
     font-weight: 200;
     font-size: 12px;
     letter-spacing: 0.15em;
@@ -1189,7 +1220,7 @@ h4 {
 
 /* "Wash and Care" bold — "Instruction" italic light */
 .care-header h2 {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Tesseract', 'Jost', 'Raleway', sans-serif;
     font-weight: 700;
     font-size: 26px;
     letter-spacing: 0.05em;
@@ -1227,7 +1258,7 @@ h4 {
     background: var(--color-gold);
     color: white;
     font-size: 20px;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Tesseract', 'Jost', 'Raleway', sans-serif;
     font-weight: 700;
     display: flex;
     justify-content: center;
@@ -1240,7 +1271,7 @@ h4 {
 }
 
 .care-label {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Tesseract', 'Jost', 'Raleway', sans-serif;
     font-weight: 200;
     font-size: 13px;
     letter-spacing: 0.05em;
@@ -1311,7 +1342,7 @@ h4 {
 }
 
 .c-sus-text h2 {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Tesseract', 'Jost', 'Raleway', sans-serif;
     font-size: 11px;
     letter-spacing: 0.2em;
     font-weight: 700;
@@ -1321,7 +1352,7 @@ h4 {
 }
 
 .c-sus-text h3 {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Tesseract', 'Jost', 'Raleway', sans-serif;
     font-weight: 200;
     font-style: italic;
     font-size: 32px;
@@ -1333,7 +1364,7 @@ h4 {
 .c-sus-text h3 em { font-style: italic; }
 
 .c-sus-text p {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Tesseract', 'Jost', 'Raleway', sans-serif;
     font-weight: 200;
     font-size: 15px;
     line-height: 1.8;
@@ -1361,7 +1392,7 @@ h4 {
 }
 
 .reflect-small {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Tesseract', 'Jost', 'Raleway', sans-serif;
     font-size: 13px;
     font-weight: 200;
     margin-bottom: 8px;
@@ -1370,7 +1401,7 @@ h4 {
 }
 
 .c-reflect-text h2 {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Tesseract', 'Jost', 'Raleway', sans-serif;
     font-weight: 700;
     font-size: 36px;
     letter-spacing: 0.03em;
@@ -1385,7 +1416,7 @@ h4 {
 }
 
 .c-reflect-text p {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Tesseract', 'Jost', 'Raleway', sans-serif;
     font-weight: 200;
     font-size: 15px;
     line-height: 1.8;
