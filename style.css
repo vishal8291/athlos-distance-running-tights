@@ -1454,8 +1454,12 @@ h4 {
    ============================================= */
 @media (max-width: 768px) {
 
-    /* HERO */
-    .hero { height: 100vh; background-position: 65% center; }
+    /* HERO — swap to portrait mobile image */
+    .hero {
+        height: 100vh;
+        background-image: url("hero-mobile.jpg");
+        background-position: center center;
+    }
 
     .title {
         bottom: 12%;
