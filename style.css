@@ -1457,141 +1457,188 @@ h4 {
    ============================================= */
 @media (max-width: 768px) {
 
-    /* HERO — swap to portrait mobile image */
+    /* ── HERO 1 ── portrait crop, full viewport height */
     .hero {
         height: 100vh;
         background-image: url("hero-mobile.jpg");
         background-position: center center;
     }
-
-    .title {
-        bottom: 12%;
-        left: 5%;
-        right: 5%;
-    }
-
-    .title h1 {
-        font-size: clamp(20px, 6.5vw, 36px);
-        white-space: nowrap;
-    }
-
+    .title { bottom: 10%; left: 5%; right: 5%; width: auto; max-width: 90vw; }
+    .title h1 { font-size: clamp(22px, 7vw, 36px); white-space: nowrap; }
     .title .category { font-size: 11px; letter-spacing: 0.2em; }
     .title .subtitle { font-size: 10px; letter-spacing: 0.2em; }
 
-    /* HERO 2 */
-    .hero2 { padding: clamp(30px, 6vw, 60px) clamp(16px, 5vw, 30px); }
+    /* ── HERO 2 — product stacks: image full-width → details below ── */
+    .hero2 { padding: 36px 20px; }
+    .description { width: 100%; max-width: 100%; font-size: 15px; margin-bottom: 28px; text-align: left; }
+    .product-row { flex-direction: column; gap: 0; align-items: stretch; }
+    .left-side { width: 100%; }
+    .left-side img { width: 100%; height: 420px; object-fit: cover; object-position: top; }
+    .dots { margin-top: 10px; }
+    .right-side { width: 100%; padding: 24px 0 0; }
+    .right-side h2 { font-size: 18px; text-align: center; }
+    .price { justify-content: center; }
+    .tax { text-align: center; }
+    hr { margin: 14px 0; }
+    h4 { font-size: 13px; }
+    .colors { justify-content: center; flex-wrap: wrap; }
+    .sizes { justify-content: center; flex-wrap: wrap; }
+    .size-btn { width: 42px; height: 42px; font-size: 13px; }
+    .buttons { flex-direction: column; gap: 12px; margin-top: 16px; }
+    .preorder, .wishlist { flex: none; width: 100%; height: 48px; justify-content: center; }
+    .availability { font-size: 12px; }
+    /* Note on the fit — full width, left margin removed */
+    .note { width: 100%; margin: 32px 0 0 0; font-size: 15px; }
 
-    .description {
-        max-width: 100%;
-        margin-bottom: 36px;
-        font-size: 16px;
+    /* ── HERO 3 — That ONE Liner: image top → text below ── */
+    .hero3 { padding: 0; height: auto; }
+    .feature-container { flex-direction: column; gap: 0; }
+    .feature-image {
+        flex: none;
+        width: 100%;
+        height: 300px;
+        margin-left: 0;
+        overflow: hidden;
     }
+    .feature-image img { width: 100%; height: 300px; object-fit: cover; object-position: top; }
+    .feature-text {
+        flex: none;
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+        padding: 36px 20px;
+        gap: 16px;
+    }
+    .feature-text h2 { font-size: clamp(22px, 6vw, 28px); }
+    .feature-text p { font-size: 15px; }
 
-    .product-row { flex-direction: column; gap: 32px; }
-
-    .left-side img { width: 100%; height: auto; }
-
-    .right-side { width: 100%; }
-
-    .buttons { flex-direction: column; }
-    .preorder, .wishlist { flex: none; width: 100%; justify-content: center; }
-
-    .note { width: 100%; margin: 40px 0 0 0; }
-
-    /* HERO 3 */
-    .hero3 { height: auto; padding: 40px 20px; }
-    .feature-container { flex-direction: column; gap: 24px; }
-    .feature-image { flex: none; width: 100%; height: 260px; margin-left: 0; }
-    .feature-image img { width: 100%; height: 260px; object-fit: cover; }
-    .feature-text { flex: none; width: 100%; height: auto; margin-left: 0; }
-    .feature-text h2 { font-size: clamp(22px, 5vw, 30px); margin-bottom: 12px; }
-
-    /* HERO 4 */
-    .hero4 { padding: 50px 20px; }
+    /* ── HERO 4 — Rational: centered text, full width ── */
+    .hero4 { padding: 40px 20px; }
     .content { max-width: 100%; }
+    .content h1 { font-size: clamp(20px, 5vw, 26px); }
+    .content p { font-size: 15px; }
 
-    /* HERO 5 */
+    /* ── HERO 5 — images stack vertically ── */
     .hero5-row2 { flex-direction: column; }
-    .hero5-left { height: 260px; }
-    .hero5-left img { height: 100%; object-fit: cover; }
+    .hero5-left { height: 260px; overflow: hidden; }
+    .hero5-left img { width: 100%; height: 260px; object-fit: cover; }
+    .hero5-right img { width: 100%; }
 
-    /* HERO 7 */
-    .hero7 { padding: clamp(40px, 7vw, 80px) 20px; }
-    .recommended { width: 100%; }
-    .recommended h2 { font-size: clamp(22px, 6vw, 32px); }
+    /* ── HERO 7 — Recommended: centered, full width ── */
+    .hero7 { padding: 48px 20px; }
+    .recommended { width: 100%; max-width: 100%; }
+    .recommended h2 { font-size: clamp(22px, 6vw, 30px); }
     .recommended p { font-size: 14px; word-break: break-word; }
 
-    /* HERO 8 */
-    .hero8 { min-height: auto; }
+    /* ── HERO 8 — Sustainable: text top → image bottom ── */
+    .hero8 { min-height: auto; flex-direction: column; }
     .sus-inner { flex-direction: column; }
-    .sus-left { flex: none; width: 100%; height: auto; padding: 40px 20px 20px; }
-    .sus-right { flex: none; width: 100%; height: 360px; }
-    .sus-right img { width: 100%; height: 360px; }
-    .fabric-overlay { bottom: 20px; padding: 0 16px; }
-    .fabric-cols { gap: 8px; }
-    .fabric-pct { font-size: 16px; }
-    .fabric-pct2 { font-size: 12px; }
+    .sus-left { flex: none; width: 100%; height: auto; padding: 36px 20px 20px; gap: 12px; }
+    .sus-heading { font-size: 16px; }
+    .sus-sub { font-size: 22px; }
+    .sus-copy { font-size: 14px; }
+    .sus-right { flex: none; width: 100%; height: 320px; }
+    .sus-right img { width: 100%; height: 320px; }
+    .fabric-overlay { bottom: 16px; padding: 0 14px; }
+    .fabric-overlay-label { font-size: 9px; margin-bottom: 10px; }
+    .fabric-cols { justify-content: space-around; }
+    .fabric-pct { font-size: 15px; }
+    .fabric-pct2 { font-size: 11px; }
+    .fabric-material { font-size: 11px; }
     .fabric-source { font-size: 9px; }
+    .fabric-col-label { font-size: 9px; }
 
-    /* HERO 9 */
+    /* ── HERO 9 — Devil: text top → image bottom ── */
     .hero9 { flex-direction: column; height: auto; }
-    .devil-text { flex: none; width: 100%; padding: 40px 20px; gap: 16px; }
-    .devil-text h2 { width: 100%; font-size: clamp(22px, 5vw, 30px); }
-    .devil-text p { width: 100%; }
-    .devil-image img { height: 300px; }
+    .devil-text { flex: none; width: 100%; padding: 36px 20px; gap: 14px; }
+    .devil-text h2 { width: 100%; font-size: clamp(20px, 5vw, 28px); }
+    .devil-text p { width: 100%; font-size: 14px; }
+    .devil-image { width: 100%; }
+    .devil-image img { width: 100%; height: 320px; object-fit: cover; }
 
-    /* HERO 10 */
-    .hero10 { padding: 40px 16px; }
+    /* ── HERO 10 — Pockets: 2×2 grid ── */
+    .hero10 { padding: 36px 16px; }
     .pocket-header { width: 100%; }
-    .pocket-grid { flex-wrap: wrap; gap: 16px; justify-content: center; }
-    .pocket-card { width: calc(50% - 8px); }
-    .pocket-card img { width: 100%; height: 280px; }
-    .pocket-card .pocket-video-wrap { width: 100%; height: 240px; }
-    .pocket-card .pocket-video-wrap video { width: 100%; height: 240px; }
+    .pocket-header h2 { font-size: clamp(20px, 5vw, 26px); }
+    .pocket-header p { font-size: 14px; }
+    .pocket-grid { flex-wrap: wrap; gap: 14px; justify-content: center; }
+    .pocket-card { width: calc(50% - 7px); flex-shrink: 0; }
+    .pocket-card:nth-child(1) img,
+    .pocket-card:nth-child(4) img { width: 100%; height: 220px; }
+    .pocket-card .pocket-video-wrap { width: 100%; height: 200px; }
+    .pocket-card .pocket-video-wrap video { width: 100%; height: 200px; }
+    .pocket-card h4 { font-size: 12px; }
+    .pocket-card p { font-size: 12px; }
 
-    /* HERO 11 */
-    .hero11 img { height: 280px; }
+    /* ── HERO 11 — Lifestyle B&W photo ── */
+    .hero11 img { height: 260px; }
 
-    /* HERO 12 */
-    .hero12 { height: auto; padding: 50px 20px; }
-    .hero15 { padding: 50px 20px; }
-    .testimonial-container { flex-direction: column; gap: 28px; }
-    .testimonial-image { width: 100%; height: 320px; }
+    /* ── HERO 12 + 15 — Testimonials: photo top → text below ── */
+    .hero12 { height: auto; padding: 0; background: #f5f4f0; }
+    .hero15 { padding: 0; background: white; }
+    .testimonial-container {
+        flex-direction: column;
+        gap: 0;
+        height: auto;
+    }
+    .testimonial-image {
+        width: 100%;
+        height: 380px;
+        flex-shrink: 0;
+    }
+    .testimonial-image img { object-position: top; }
+    .testimonial-text {
+        padding: 32px 20px 40px;
+    }
+    .quote-open { font-size: 52px; margin-bottom: 12px; }
+    .quote-close { font-size: 52px; margin-top: 10px; }
+    .testimonial-text p { font-size: 15px; line-height: 1.6; }
+    .author { margin-top: 20px; padding-top: 12px; }
 
-    /* HERO 13 */
+    /* ── HERO 13 — Wash & Care: 2-column grid on mobile ── */
     .hero13 { min-height: auto; padding: 40px 20px; }
     .care-header { margin-bottom: 28px; }
+    .care-header h2 { font-size: 18px; }
     .care-grid { flex-wrap: wrap; }
     .care-card {
-        flex: 0 0 50%;
+        flex: 0 0 calc(50% - 1px);
         border-right: none;
-        border-bottom: 1px solid rgba(0,0,0,0.12);
-        padding: 24px 12px;
+        border-bottom: 1px solid rgba(0,0,0,0.10);
+        padding: 20px 10px;
     }
-    .care-card:nth-child(odd) { border-right: 1px solid rgba(0,0,0,0.12); }
+    .care-card:nth-child(odd) { border-right: 1px solid rgba(0,0,0,0.10); }
+    .care-card:nth-child(4) { border-bottom: none; }
     .care-card:last-child { flex: 0 0 100%; border-right: none; border-bottom: none; }
-    .care-icon img { width: 80px; height: 80px; }
+    .care-number { width: 44px; height: 44px; font-size: 17px; margin-bottom: 14px; }
+    .care-label { font-size: 12px; }
+    .care-icon img { width: 72px; height: 72px; }
 
-    /* HERO 14 */
+    /* ── HERO 14 — Carousel: slides stack on mobile ── */
     .c-slide { width: 100vw; height: auto; flex-direction: column; }
-    .c-sus-text, .c-reflect-text { flex: none; padding: 30px 20px; }
-    .c-sus-img, .c-reflect-img { height: 240px; }
-
-    /* HERO 15 */
-    .hero15 { padding: 50px 20px; }
+    .c-sus-text { flex: none; width: 100%; padding: 28px 20px; }
+    .c-sus-img { width: 100%; height: 260px; }
+    .c-sus-img img { width: 100%; height: 260px; object-fit: cover; }
+    .c-reflect-img { width: 100%; height: 260px; }
+    .c-reflect-img img { width: 100%; height: 260px; object-fit: cover; }
+    .c-reflect-text { flex: none; width: 100%; padding: 28px 20px; }
+    .c-sus-text h2, .c-reflect-text h2 { font-size: 20px; }
+    .c-sus-text h3 { font-size: 22px; }
+    .c-sus-text p, .c-reflect-text p { font-size: 14px; }
 }
 
 /* =============================================
    SMALL PHONES — 480px and below
    ============================================= */
 @media (max-width: 480px) {
-    .title h1 {
-        font-size: clamp(18px, 7vw, 28px);
-        white-space: normal;
-        max-width: 85vw;
-    }
-    .pocket-grid { grid-template-columns: 1fr; }
+    .title h1 { font-size: clamp(18px, 7vw, 26px); white-space: nowrap; }
+    /* On very small phones pocket cards go single column */
+    .pocket-card { width: 100%; }
+    .pocket-card:nth-child(1) img,
+    .pocket-card:nth-child(4) img { height: 260px; }
+    .pocket-card .pocket-video-wrap,
+    .pocket-card .pocket-video-wrap video { height: 240px; }
+    /* Care cards single column on tiny screens */
     .care-card { flex: 0 0 100%; border-right: none; }
     .care-card:nth-child(odd) { border-right: none; }
-    .c-sus-text, .c-reflect-text { flex: 0 0 280px; }
+    .care-card:nth-child(4) { border-bottom: 1px solid rgba(0,0,0,0.10); }
 }
