@@ -151,17 +151,18 @@ body {
     background: #FFFFFF;
 }
 
-/* Centered intro text */
+/* Centered intro text — Figma: 598×154px, weight 200, 18px, line-height 100%, letter-spacing 3% */
 .description {
-    max-width: 598px;
+    width: 598px;
+    max-width: 100%;
     margin: 0 auto 60px;
     font-family: 'Raleway', sans-serif;
     font-weight: 200;
     font-size: 18px;
-    line-height: 1.7;
+    line-height: 1.5;
     letter-spacing: 0.03em;
     color: #000000;
-    text-align: justify;
+    text-align: left;
 }
 
 /* Product card row — image left, details right */
@@ -172,7 +173,7 @@ body {
     gap: var(--gap-md);  /* 52px */
 }
 
-/* --- LEFT: product image --- */
+/* --- LEFT: product image — Figma: 415.08 × 515.7px --- */
 .left-side {
     text-align: center;
     flex-shrink: 0;
@@ -182,6 +183,7 @@ body {
     width: 415px;
     height: 516px;
     object-fit: cover;
+    object-position: top;
     display: block;
 }
 
@@ -206,9 +208,9 @@ body {
     opacity: 1;
 }
 
-/* --- RIGHT: product details --- */
+/* --- RIGHT: product details — Figma: 634 × 480.3px --- */
 .right-side {
-    width: 580px;
+    width: 634px;
     display: flex;
     flex-direction: column;
     gap: var(--gap-xs);
@@ -301,10 +303,11 @@ h4 {
     transform: scale(1.1);
 }
 
-/* Active swatch — black ring */
+/* Active swatch — gold ring (per Figma) */
 .active-color {
-    border-color: #000000;
-    outline: none;
+    border-color: var(--color-gold);
+    outline: 2px solid var(--color-gold);
+    outline-offset: 2px;
 }
 
 /* Official color palette from Figma */
@@ -383,20 +386,19 @@ h4 {
     align-items: center;
 }
 
-/* Pre-Order — gold fill, uppercase, 4px radius */
+/* Pre-Order — gold fill, rounded pill (per Figma screenshot) */
 .preorder {
     flex: 1;
     height: 52px;
     background-color: var(--color-gold);
     color: #FFFFFF;
     border: none;
-    border-radius: 4px;
+    border-radius: 30px;
     cursor: pointer;
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
-    font-size: 14px;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 0.05em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -408,19 +410,18 @@ h4 {
     background-color: var(--color-gold-light);
 }
 
-/* Wishlist — transparent, black border, 4px radius */
+/* Wishlist — transparent, gold border, rounded pill (per Figma screenshot) */
 .wishlist {
     flex: 1;
     height: 52px;
     background-color: transparent;
-    border: 1.5px solid #000000;
-    border-radius: 4px;
+    border: 1.5px solid var(--color-gold);
+    border-radius: 30px;
     cursor: pointer;
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
-    font-size: 14px;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 0.05em;
     color: #000000;
     display: flex;
     align-items: center;
@@ -430,19 +431,18 @@ h4 {
 }
 
 .wishlist:hover {
-    background: #f5f5f5;
+    background: rgba(184, 150, 62, 0.05);
 }
 
-/* Availability notice */
+/* Availability notice — Figma: gold colour, italic, centered */
 .availability {
     margin-top: 14px;
     font-family: 'Raleway', sans-serif;
     font-weight: 200;
-    font-size: 12px;
+    font-size: 13px;
     font-style: italic;
     letter-spacing: 0.03em;
-    color: #000000;
-    opacity: 0.6;
+    color: var(--color-gold);
     text-align: center;
 }
 
