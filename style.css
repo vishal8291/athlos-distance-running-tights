@@ -622,6 +622,7 @@ h4 {
 
 /* =============================================
    SECTION 7 — RECOMMENDED FOR (hero7)
+   Figma: content block 458 × 103px (Hug), centered
    ============================================= */
 .hero7 {
     padding: 100px 120px;
@@ -629,26 +630,37 @@ h4 {
     text-align: center;
 }
 
+/* Centre the 458px content block */
+.recommended {
+    width: 458px;
+    margin: 0 auto;
+}
+
+/* "Recommended" bold + "for" italic — gap between heading and sub is part of 103px total */
 .recommended h2 {
     font-family: 'Raleway', sans-serif;
-    font-weight: 200;
-    font-style: italic;
+    font-weight: 700;          /* "Recommended" is bold */
+    font-style: normal;
     font-size: 36px;
     letter-spacing: 0.02em;
     margin-bottom: 20px;
+    line-height: 1.1;
     color: #000000;
 }
 
 .recommended h2 em {
+    font-weight: 200;          /* "for" is light italic */
     font-style: italic;
 }
 
+/* "Distance Running | Ultra Running | High-Intensity Training" */
 .recommended p {
     font-family: 'Raleway', sans-serif;
-    font-weight: 400;
-    font-size: 17px;
+    font-weight: 200;
+    font-size: 15px;
     letter-spacing: 0.05em;
     color: #000000;
+    line-height: 1.4;
 }
 
 /* =============================================
