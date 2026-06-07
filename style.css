@@ -918,82 +918,126 @@ h4 {
 
 /* =============================================
    SECTION 10 — PICKING THE RIGHT POCKET (hero10)
+   Figma: section 1241×801px | header 734×106px
+   Cards: image 300×601px | video 300×495px
    ============================================= */
 .hero10 {
-    padding: 100px 120px;
-    background: #fafafa;
+    padding: 80px 100px;
+    background: #ffffff;
 }
 
+/* Header block — 734 × 106px centered */
 .pocket-header {
+    width: 734px;
+    max-width: 100%;
+    margin: 0 auto 52px;
     text-align: center;
-    margin-bottom: 60px;
 }
 
+/* "Picking the" italic | "right pocket" bold */
 .pocket-header h2 {
     font-family: 'Raleway', sans-serif;
-    font-weight: 700;
+    font-weight: 200;
+    font-style: italic;
     font-size: 36px;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
+    letter-spacing: 0.02em;
     margin-bottom: 16px;
     color: #000000;
+    line-height: 1.1;
 }
 
-.pocket-header h2 em {
-    font-style: italic;
-    font-weight: 200;
-    text-transform: none;
+.pocket-header h2 strong {
+    font-weight: 700;
+    font-style: normal;
 }
 
 .pocket-header p {
     font-family: 'Raleway', sans-serif;
     font-weight: 200;
-    font-size: 17px;
+    font-size: 16px;
     letter-spacing: 0.03em;
     color: #000000;
-    line-height: 1.7;
-    max-width: 560px;
-    margin: 0 auto;
+    line-height: 1.6;
 }
 
+/* 4-column grid — each card 300px wide */
 .pocket-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
 }
 
 .pocket-card {
     display: flex;
     flex-direction: column;
-    gap: 14px;
-    align-items: flex-start;
+    gap: 12px;
+    width: 300px;
+    flex-shrink: 0;
 }
 
-.pocket-card video {
-    width: 100%;
-    height: 220px;
+/* Image cards: 300 × 601px */
+.pocket-card img {
+    width: 300px;
+    height: 601px;
     object-fit: cover;
-    border-radius: 4px;
+    object-position: center;
     display: block;
 }
 
+/* Video cards: 300 × 495px */
+.pocket-card .pocket-video-wrap {
+    position: relative;
+    width: 300px;
+    height: 495px;
+    overflow: hidden;
+}
+
+.pocket-card .pocket-video-wrap video {
+    width: 300px;
+    height: 495px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Play button overlay */
+.pocket-card .pocket-video-wrap::after {
+    content: '▶';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 52px;
+    height: 52px;
+    background: rgba(0,0,0,0.55);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    pointer-events: none;
+}
+
+/* Card label — bold */
 .pocket-card h4 {
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
     font-size: 14px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+    letter-spacing: 0.05em;
     color: #000000;
+    margin: 0;
 }
 
+/* Card description — light */
 .pocket-card p {
     font-family: 'Raleway', sans-serif;
     font-weight: 200;
-    font-size: 14px;
+    font-size: 13px;
     letter-spacing: 0.03em;
     color: #000000;
-    line-height: 1.6;
-    opacity: 0.8;
+    line-height: 1.5;
+    opacity: 0.75;
+    margin: 0;
 }
 
 /* =============================================
@@ -1469,9 +1513,13 @@ h4 {
     .devil-image img { height: 300px; }
 
     /* HERO 10 */
-    .hero10 { padding: 50px 20px; }
-    .pocket-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
-    .pocket-card video { height: 180px; }
+    .hero10 { padding: 40px 16px; }
+    .pocket-header { width: 100%; }
+    .pocket-grid { flex-wrap: wrap; gap: 16px; justify-content: center; }
+    .pocket-card { width: calc(50% - 8px); }
+    .pocket-card img { width: 100%; height: 280px; }
+    .pocket-card .pocket-video-wrap { width: 100%; height: 240px; }
+    .pocket-card .pocket-video-wrap video { width: 100%; height: 240px; }
 
     /* HERO 11 */
     .hero11 img { height: 280px; }
