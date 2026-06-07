@@ -1042,24 +1042,7 @@ h4 {
     display: block;
 }
 
-/* Play button overlay */
-.pocket-card .pocket-video-wrap::after {
-    content: '▶';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 52px;
-    height: 52px;
-    background: rgba(0,0,0,0.55);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 18px;
-    pointer-events: none;
-}
+/* No overlay — videos autoplay silently, no play button needed */
 
 /* Card label — bold */
 .pocket-card h4 {
