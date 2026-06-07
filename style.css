@@ -484,7 +484,8 @@ h4 {
     align-items: center;
 }
 
-/* Image — 683 × 444px, sits left with slight inset */
+/* Image — 683 × 444px, sits left with slight inset
+   liner.jpg is the mobile frame — crop top portion = liner photo only */
 .feature-image {
     flex: 0 0 683px;
     height: 444px;
@@ -494,8 +495,9 @@ h4 {
 
 .feature-image img {
     width: 683px;
-    height: 444px;
+    height: 683px;       /* taller than container — crop bottom text away */
     object-fit: cover;
+    object-position: center top;  /* show only the top liner photo portion */
     display: block;
 }
 
