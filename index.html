@@ -178,47 +178,64 @@
         </div>
     </section>
 
-    <!-- SECTION 8: SUSTAINABLE PERFORMANCE — full section with fabric table -->
+    <!-- SECTION 8: SUSTAINABLE PERFORMANCE
+         Figma: text panel 356×258px left | image 941×695px right
+         Fabric composition overlaid on image -->
     <section class="hero8">
 
         <div class="sus-inner">
 
+            <!-- LEFT: text panel 356×258px -->
             <div class="sus-left">
-                <h2 class="sus-heading">SUSTAINABLE</h2>
-                <h3 class="sus-sub"><em>Performance</em></h3>
+                <p class="sus-heading">SUSTAINABLE</p>
+                <h2 class="sus-sub"><em>Performance</em></h2>
                 <p class="sus-copy">
                     The Distance Running Tights are crafted with recycled polyester
                     with its source originating in discarded plastic bottles. The liner
                     is recycled nylon from ocean and industrial waste. It fits in
                     perfectly with our ethic of bringing high performance with sustainability.
                 </p>
-
-                <!-- Fabric Composition Table -->
-                <div class="fabric-table">
-                    <div class="fabric-row fabric-header">
-                        <span>COMPONENT</span>
-                        <span>COMPOSITION</span>
-                        <span>SOURCE</span>
-                        <span>BENEFIT</span>
-                    </div>
-                    <div class="fabric-row">
-                        <span class="fabric-label">OUTER FABRIC</span>
-                        <span>87% Recycled Polyester + 13% Elastane</span>
-                        <span>From plastic bottles and industrial waste</span>
-                        <span>For stretch</span>
-                    </div>
-                    <div class="fabric-row">
-                        <span class="fabric-label">INNER LINER</span>
-                        <span>82% Recycled Nylon + 18% Elastane</span>
-                        <span>From Ocean Waste</span>
-                        <span>For stretch</span>
-                    </div>
-                </div>
             </div>
 
+            <!-- RIGHT: image 941×695px with fabric overlay -->
             <div class="sus-right">
-                <img src="image1.jpg" alt="Outer fabric detail">
-                <img src="image2.jpg" alt="Inner liner detail">
+                <img src="sus.jpg" alt="Sustainable fabric detail">
+
+                <!-- Fabric composition overlaid on image -->
+                <div class="fabric-overlay">
+                    <p class="fabric-overlay-label">Fabric Composition</p>
+                    <div class="fabric-cols">
+
+                        <!-- OUTER FABRIC -->
+                        <div class="fabric-col">
+                            <p class="fabric-col-label">Outer Fabric</p>
+                            <div class="fabric-col-main">
+                                <span class="fabric-pct">87%</span>
+                                <span class="fabric-plus">+</span>
+                                <span class="fabric-pct2">13%</span>
+                            </div>
+                            <p class="fabric-material">Recycled Polyester&nbsp;&nbsp;Elastane</p>
+                            <p class="fabric-source">From plastic bottles and industrial waste</p>
+                            <p class="fabric-source">For stretch</p>
+                        </div>
+
+                        <div class="fabric-col-divider"></div>
+
+                        <!-- INNER LINER -->
+                        <div class="fabric-col">
+                            <p class="fabric-col-label">Inner Liner</p>
+                            <div class="fabric-col-main">
+                                <span class="fabric-pct">82%</span>
+                                <span class="fabric-plus">+</span>
+                                <span class="fabric-pct2">18%</span>
+                            </div>
+                            <p class="fabric-material">Recycled Nylon&nbsp;&nbsp;Elastane</p>
+                            <p class="fabric-source">From Ocean Waste</p>
+                            <p class="fabric-source">For stretch</p>
+                        </div>
+
+                    </div>
+                </div>
             </div>
 
         </div>
@@ -229,7 +246,8 @@
     <section class="hero9">
 
         <div class="devil-text">
-            <h2><em>Devil in the</em> DETAILS</h2>
+            <!-- "Devil in the" = italic light | "DETAILS" = bold uppercase -->
+            <h2><em>Devil in the</em> <span class="bold-word">DETAILS</span></h2>
             <p>
                 Towel hooks, 5 functional pockets, reflective details facing the
                 side of traffic, the Distance Running Tights take your running

@@ -665,168 +665,253 @@ h4 {
 
 /* =============================================
    SECTION 8 — SUSTAINABLE PERFORMANCE (hero8)
-   Dark bg: #1A1A1A  (official Figma color)
+   Dark bg: #1A1A1A
+   Figma: text panel 356×258px | image 941×695px
+   Fabric composition overlaid ON the image
    ============================================= */
 .hero8 {
     background: var(--color-dark-bg);
-    padding: 100px 120px;
     color: white;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    min-height: 695px;
 }
 
 .sus-inner {
     display: flex;
-    gap: 80px;
-    align-items: flex-start;
-    max-width: 1200px;
-    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    align-items: center;
 }
 
+/* LEFT: text panel — 356 × 258px */
 .sus-left {
-    flex: 1;
+    flex: 0 0 356px;
+    height: 258px;
+    padding: 0 52px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
 }
 
+/* "SUSTAINABLE" — uppercase bold */
 .sus-heading {
     font-family: 'Raleway', sans-serif;
-    font-size: 11px;
-    letter-spacing: 0.2em;
+    font-size: 22px;
+    letter-spacing: 0.08em;
     font-weight: 700;
     text-transform: uppercase;
-    color: var(--color-gold);
-    margin-bottom: 8px;
+    color: white;
+    line-height: 1;
+    margin: 0;
 }
 
+/* "Performance" — italic light */
 .sus-sub {
     font-family: 'Raleway', sans-serif;
     font-weight: 200;
     font-style: italic;
-    font-size: 36px;
+    font-size: 28px;
     letter-spacing: 0.02em;
-    line-height: 1.2;
-    margin-bottom: 28px;
+    line-height: 1.1;
     color: white;
+    margin: 0;
 }
 
-.sus-sub em {
-    font-style: italic;
-}
+.sus-sub em { font-style: italic; }
 
 .sus-copy {
     font-family: 'Raleway', sans-serif;
     font-weight: 200;
-    font-size: 16px;
-    line-height: 1.8;
+    font-size: 14px;
+    line-height: 1.6;
     letter-spacing: 0.03em;
     opacity: 0.85;
-    margin-bottom: 48px;
-    text-align: justify;
+    margin: 0;
+    text-align: left;
 }
 
-/* Fabric composition table */
-.fabric-table {
-    border-top: 1px solid rgba(255, 255, 255, 0.25);
-}
-
-.fabric-row {
-    display: grid;
-    grid-template-columns: 1.2fr 2fr 1.8fr 1fr;
-    gap: 16px;
-    padding: 16px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    font-size: 14px;
-    line-height: 1.5;
-    color: white;
-    opacity: 0.9;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 200;
-    letter-spacing: 0.03em;
-}
-
-.fabric-header {
-    font-size: 10px;
-    letter-spacing: 0.2em;
-    opacity: 0.5;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
-.fabric-label {
-    font-weight: 700;
-    font-size: 11px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--color-gold);
-    opacity: 1;
-}
-
+/* RIGHT: image container — 941 × 695px, fabric table overlaid */
 .sus-right {
-    flex: 1;
-    display: flex;
-    gap: 14px;
-    align-self: stretch;
-    min-height: 500px;
+    flex: 0 0 941px;
+    height: 695px;
+    position: relative;
+    overflow: hidden;
 }
 
 .sus-right img {
-    flex: 1;
-    width: 50%;
-    height: 100%;
-    display: block;
+    width: 941px;
+    height: 695px;
     object-fit: cover;
-    border-radius: 2px;
+    display: block;
+}
+
+/* Fabric composition overlay — sits on top of image */
+.fabric-overlay {
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+    right: 0;
+    padding: 0 48px;
+    color: white;
+}
+
+.fabric-overlay-label {
+    font-family: 'Raleway', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    font-weight: 400;
+    text-transform: uppercase;
+    opacity: 0.6;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.fabric-cols {
+    display: flex;
+    gap: 0;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.fabric-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.fabric-col-divider {
+    width: 1px;
+    height: 80px;
+    background: rgba(255,255,255,0.3);
+    align-self: flex-start;
+    margin-top: 20px;
+}
+
+.fabric-col-label {
+    font-family: 'Raleway', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    font-weight: 700;
+    text-transform: uppercase;
+    opacity: 0.7;
+    margin-bottom: 8px;
+}
+
+.fabric-col-main {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+}
+
+.fabric-pct {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    color: white;
+}
+
+.fabric-plus {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+    font-size: 16px;
+    opacity: 0.6;
+    align-self: center;
+}
+
+.fabric-pct2 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+    font-size: 16px;
+    color: white;
+}
+
+.fabric-material {
+    font-family: 'Raleway', sans-serif;
+    font-size: 13px;
+    font-weight: 200;
+    opacity: 0.85;
+    letter-spacing: 0.03em;
+    margin-top: 2px;
+}
+
+.fabric-source {
+    font-family: 'Raleway', sans-serif;
+    font-size: 11px;
+    font-weight: 200;
+    font-style: italic;
+    opacity: 0.55;
+    letter-spacing: 0.02em;
+    margin-top: 4px;
 }
 
 /* =============================================
    SECTION 9 — DEVIL IN THE DETAILS (hero9)
+   Figma: 1440 × 598px total | text 347 × 147px
+   "Devil in the" = italic light | "DETAILS" = bold uppercase
    ============================================= */
 .hero9 {
     display: flex;
     background: white;
-    min-height: 600px;
+    height: 598px;
+    overflow: hidden;
 }
 
+/* Left: text panel — 347 × 147px, padded from edges */
 .devil-text {
-    flex: 1;
-    padding: 100px 120px;
+    flex: 0 0 480px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 0 60px;
+    gap: 20px;
 }
 
+/* "Devil in the DETAILS"
+   "Devil in the" = italic weight 200
+   "DETAILS"      = bold weight 700 uppercase */
 .devil-text h2 {
     font-family: 'Raleway', sans-serif;
-    font-weight: 700;
-    font-size: 40px;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    line-height: 1.1;
-    margin-bottom: 24px;
+    font-weight: 200;
+    font-style: italic;
+    font-size: 32px;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+    margin: 0;
     color: #000000;
+    width: 347px;
 }
 
-.devil-text h2 em {
-    font-style: italic;
-    font-weight: 200;
-    text-transform: none;
+.devil-text h2 .bold-word {
+    font-weight: 700;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
 .devil-text p {
     font-family: 'Raleway', sans-serif;
     font-weight: 200;
-    font-size: 16px;
-    line-height: 1.8;
+    font-size: 14px;
+    line-height: 1.6;
     letter-spacing: 0.03em;
     color: #000000;
-    max-width: 500px;
-    text-align: justify;
+    width: 347px;
+    margin: 0;
 }
 
+/* Right: image fills remaining width */
 .devil-image {
     flex: 1;
+    overflow: hidden;
 }
 
 .devil-image img {
     width: 100%;
-    height: 100%;
+    height: 598px;
     display: block;
     object-fit: cover;
 }
@@ -1365,17 +1450,22 @@ h4 {
     .hero7 { padding: clamp(40px, 7vw, 80px) 20px; }
 
     /* HERO 8 */
-    .hero8 { padding: 50px 20px; }
-    .sus-inner { flex-direction: column; gap: 28px; }
-    .sus-right { flex-direction: row; height: 240px; min-height: unset; }
-    .sus-right img { width: 50%; height: 100%; }
-    .fabric-row { grid-template-columns: 1fr 1.5fr; font-size: 12px; }
-    .fabric-row span:nth-child(3),
-    .fabric-row span:nth-child(4) { display: none; }
+    .hero8 { min-height: auto; }
+    .sus-inner { flex-direction: column; }
+    .sus-left { flex: none; width: 100%; height: auto; padding: 40px 20px 20px; }
+    .sus-right { flex: none; width: 100%; height: 360px; }
+    .sus-right img { width: 100%; height: 360px; }
+    .fabric-overlay { bottom: 20px; padding: 0 16px; }
+    .fabric-cols { gap: 8px; }
+    .fabric-pct { font-size: 16px; }
+    .fabric-pct2 { font-size: 12px; }
+    .fabric-source { font-size: 9px; }
 
     /* HERO 9 */
-    .hero9 { flex-direction: column; min-height: unset; }
-    .devil-text { padding: 50px 20px; }
+    .hero9 { flex-direction: column; height: auto; }
+    .devil-text { flex: none; width: 100%; padding: 40px 20px; gap: 16px; }
+    .devil-text h2 { width: 100%; font-size: clamp(22px, 5vw, 30px); }
+    .devil-text p { width: 100%; }
     .devil-image img { height: 300px; }
 
     /* HERO 10 */
