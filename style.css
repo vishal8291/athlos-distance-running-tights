@@ -58,13 +58,13 @@ body {
     inset: 0;
     background: linear-gradient(
         to top,
-        rgba(0, 0, 0, 0.55) 0%,
-        rgba(0, 0, 0, 0) 60%
+        rgba(0, 0, 0, 0.45) 0%,
+        rgba(0, 0, 0, 0) 100%
     );
     z-index: 1;
 }
 
-/* Hero text container */
+/* Hero text container — Figma: 602 × 194px, bottom-left */
 .title {
     position: absolute;
     bottom: 80px;
@@ -74,6 +74,8 @@ body {
     flex-direction: column;
     gap: 8px;
     color: white;
+    width: 602px;
+    max-width: calc(100% - 80px);
 }
 
 /* "MEN'S" */
